@@ -1,0 +1,26 @@
+3.邮箱注册
+在git bash界面输入如下内容即可完成邮箱的注册：
+
+$ git config --global user.name "user.name"
+
+（说明：双引号中需要你的用户名，这个可以随便输入，比如“zhangsan”）
+
+$ git config --global user.email "yourmail@youremail.com.cn"
+
+（说明： 双引号中需要输入你的有效邮箱，比如“12131312@qq.com”）
+4.查看是否存在密钥ssh keys
+cd ~/.ssh
+若出现“No such file or directory”,则表示需要创建一个ssh keys。
+5.如果没设置，就创建新的ssh keys，不然git不能上传文件
+$ssh-keygen -t rsa -C "你的邮箱名"
+
+$指定目录: C:\deskbook\（说明：若在此处不输入路径，而直接按回车，则ssh keys生成后存放的路径为C:\User\.ssh）
+
+$输入密码: 123456
+
+$确认密码: 123456
+
+如此即可在C:\deskbook\文件夹中生成ssh keys。包括两个文件rd_rsa和id_rsa.pub
+
+
+然后找到rd_rsa和id_rsa.pub所在目录打开idb_rsa.pub（可以把后缀名改成.txt),登录自己的GitHub账号，找到Settings,
